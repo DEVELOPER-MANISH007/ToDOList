@@ -1,0 +1,125 @@
+/***** Base *****/
+*{ box-sizing: border-box; }
+body{
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;
+  background: linear-gradient(180deg, #f7f8fb, #eef1f6);
+  color: #111827;
+}
+
+h1{
+  text-align: center;
+  margin: 24px 0 12px;
+  font-size: 28px;
+}
+
+/***** Form *****/
+form{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+input{
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #111827;
+  background-color: #ffffff;
+  outline: none;
+  transition: box-shadow .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+input::placeholder{ color: #9ca3af; }
+
+input:focus{
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+  background-color: #fff;
+}
+
+button{
+  padding: 12px 18px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  cursor: pointer;
+  transition: transform .06s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+button:hover{
+  filter: brightness(1.02);
+  box-shadow: 0 8px 18px rgba(139, 92, 246, 0.25);
+}
+
+button:active{ transform: translateY(1px); }
+
+/***** List *****/
+.outerdiv{
+  max-width: 720px;
+  width: 100%;
+  margin: 18px auto 40px;
+  padding: 0 16px;
+}
+
+.outerdiv ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.outerdiv ul li{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  color: #111827;
+  background-color: #ffffff;
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .08s ease, background-color .2s ease;
+}
+
+.outerdiv ul li:hover{
+  border-color: #d1d5db;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.outerdiv ul li:active{ transform: translateY(1px); }
+
+.outerdiv ul li span{
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  line-height: 1;
+  color: #ef4444;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.outerdiv ul li span:hover{
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+/***** Responsive *****/
+@media (max-width: 480px){
+  h1{ font-size: 24px; }
+  button{ padding: 12px 14px; }
+}
